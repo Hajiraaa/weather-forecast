@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1>Weather Dashboard</h1>
+                <div class="search">
+                    <input type="text" placeholder="Search for a city..." spellcheck="false">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="units-toggle">
+                    <button class="unit-btn active" data-unit="metric">°C</button>
+                    <button class="unit-btn" data-unit="imperial">°F</button>
+                </div>
+            </div>
+            
+            <div class="error">
+                <i class="fas fa-exclamation-circle"></i>
+                <p>City not found. Please check the spelling and try again.</p>
+            </div>
+            
+            <div class="loader">
+                <div class="spinner"></div>
+                <p>Fetching weather data...</p>
+            </div>
+            
+            <div class="initial-state">
+                <img src="images/clouds.png" alt="Weather">
+                <h2>Weather at your fingertips</h2>
+                <p>Enter a city name to get the current weather conditions</p>
+            </div>
+            
+            <div class="weather">
+                <div class="main-weather">
+                    <div class="left">
+                        <img src="images/rain.png" class="weather-icon" alt="Weather condition">
+                        <h2 class="weather-description">Light Rain</h2>
+                    </div>
+                    <div class="right">
+                        <h1 class="temp">22°C</h1>
+                        <h2 class="city">New York</h2>
+                        <p class="date">Sunday, April 6</p>
+                    </div>
+                </div>
+                
+                <div class="details">
+                    <div class="detail-item">
+                        <i class="fas fa-temperature-high"></i>
+                        <div>
+                            <p class="feels-like">24°C</p>
+                            <p>Feels Like</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-tint"></i>
+                        <div>
+                            <p class="humidity">50%</p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-wind"></i>
+                        <div>
+                            <p class="wind">15 km/h</p>
+                            <p>Wind Speed</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-compress-arrows-alt"></i>
+                        <div>
+                            <p class="pressure">1013 hPa</p>
+                            <p>Pressure</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="additional-info">
+                    <div class="info-item">
+                        <i class="fas fa-sun"></i>
+                        <div>
+                            <p>Sunrise</p>
+                            <p class="sunrise">06:45 AM</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-moon"></i>
+                        <div>
+                            <p>Sunset</p>
+                            <p class="sunset">07:30 PM</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-eye"></i>
+                        <div>
+                            <p>Visibility</p>
+                            <p class="visibility">10 km</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-cloud"></i>
+                        <div>
+                            <p>Cloudiness</p>
+                            <p class="cloudiness">40%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="forecast">
+                <h2>5-Day Forecast</h2>
+                <div class="forecast-container">
+                   
+                </div>
+            </div>
+            
+            <div class="recent-searches">
+                <h3>Recent Searches</h3>
+                <div class="recent-list">
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
